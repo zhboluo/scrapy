@@ -1,5 +1,1 @@
 # scrapy
-*   Red
-*   Green
-*   Blue
-
