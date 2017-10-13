@@ -48,20 +48,20 @@ class TencentItem(scrapy.Item):
 
 ```
 
-## 三、制作爬虫 （spiders/itcastSpider.py）
+## 三、制作爬虫 （spiders/TencentSpider.py）
 
 **爬虫功能要分两步：**
 
 ### 1\. 爬数据
 
-*   在当前目录下输入命令，将在`mySpider/spider`目录下创建一个名为`itcast`的爬虫，并指定爬取域的范围：
+*   在当前目录下输入命令，将在`Tencent/spider`目录下创建一个名为`tencent`的爬虫，并指定爬取域的范围：
 
 ```
 scrapy genspider tencent "tr.tencent.com"
 
 ```
 
-*   打开 mySpider/spider目录里的 itcast.py，默认增加了下列代码:
+*   打开 Tencent/spider目录里的 tencent.py，默认增加了下列代码:
 
 ```
 import scrapy
@@ -151,14 +151,14 @@ scrapy crawl tencent
 *   我们之前在mySpider/items.py 里定义了一个TencentItem类。 这里引入进来
 
 ```
-  from mySpider.items import TencentItem
+  from TencentSpiders.items import TencentItem
 
 ```
 
 *   然后将我们得到的数据封装到一个 `TencentItem` 对象中，可以保存每个信息的属性：
 
 ```
-from mySpider.items import TencentItem
+from TencentSpiders.items import TencentItem
 
 def parse(self, response):
     #open("xxx.html","wb").write(response.body).close()
@@ -167,8 +167,8 @@ def parse(self, response):
     items = []
 
     for each in response.xpath("//div[@class='li_txt']"):
-        # 将我们得到的数据封装到一个 `ItcastItem` 对象
-        item = ItcastItem()
+        # 将我们得到的数据封装到一个 `TencentItem` 对象
+        item = TencentItem()
         #extract()方法返回的都是unicode字符串
         name = each.xpath("h3/text()").extract()
         title = each.xpath("h4/text()").extract()
@@ -194,39 +194,38 @@ def parse(self, response):
 
 ```
 # json格式，默认为Unicode编码
-scrapy crawl itcast -o teachers.json
+scrapy crawl tencent -o teachers.json
 
 # json lines格式，默认为Unicode编码
-scrapy crawl itcast -o teachers.jsonl
+scrapy crawl tencent -o teachers.jsonl
 
 # csv 逗号表达式，可用Excel打开
-scrapy crawl itcast -o teachers.csv
+scrapy crawl tencent -o teachers.csv
 
 # xml格式
-scrapy crawl itcast -o teachers.xml
+scrapy crawl tencent -o teachers.xml
 
 ```
 
 * * *
 
-## 思考
 
 #### 如果将代码改成下面形式，结果完全一样。
 
 #### 请思考 yield 在这里的作用：
 
 ```
-from mySpider.items import ItcastItem
+from TencentSpiders.items import Tencenttem
 
 def parse(self, response):
-    #open("teacher.html","wb").write(response.body).close()
+    #open("xx.html","wb").write(response.body).close()
 
-    # 存放老师信息的集合
+    # 存放信息的集合
     #items = []
 
     for each in response.xpath("//div[@class='li_txt']"):
-        # 将我们得到的数据封装到一个 `ItcastItem` 对象
-        item = ItcastItem()
+        # 将我们得到的数据封装到一个 `TencentItem` 对象
+        item = TencentItem()
         #extract()方法返回的都是unicode字符串
         name = each.xpath("h3/text()").extract()
         title = each.xpath("h4/text()").extract()
