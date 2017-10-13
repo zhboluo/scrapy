@@ -241,7 +241,7 @@ ITEM_PIPELINES = {
 
 ```
 
-<footer class="page-footer"><span class="copyright">Copyright © BigCat all right reserved，powered by Gitbook</span><span class="footer-modification">「Revision Time: 2016-12-09 03:17:10」</span></footer>
+
 
 </section>
 
