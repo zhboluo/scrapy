@@ -180,8 +180,8 @@ class TencentSpider(scrapy.Spider):
             page = int(curpage) + 10
             url = re.sub('\d+', str(page), response.url)
 
-            # 发送新的url请求加入待爬队列，并调用回调函数 self.parse
-            yield scrapy.Request(url, callback = self.parse)
+         # 发送新的url请求加入待爬队列，并调用回调函数 self.parse
+         yield scrapy.Request(url, callback = self.parse)
 
             # 将获取的数据交给pipeline
             yield item
@@ -223,9 +223,9 @@ ITEM_PIPELINES = {
 
 *   执行爬虫：`scrapy crawl tencent`
 
-## 思考
 
-#### 请思考 parse()方法的工作机制：
+
+####  parse()方法的工作机制：
 
 ```
 
