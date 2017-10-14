@@ -212,7 +212,7 @@ scrapy crawl tencent -o teachers.xml
 
 #### 如果将代码改成下面形式，结果完全一样。
 
-#### 请思考 yield 在这里的作用：
+####  yield 在这里的作用：
 
 ```
 from TencentSpiders.items import Tencenttem
