@@ -246,6 +246,5 @@ def parse(self, response):
 
 ```
 
-<footer class="page-footer"><span class="copyright">Copyright © BigCat all right reserved，powered by Gitbook</span><span class="footer-modification">「Revision Time: 2017-02-05 22:51:12」</span></footer>
 
-[](../../file/part04/4.1.html)[](../../file/part04/4.3.html)
+
