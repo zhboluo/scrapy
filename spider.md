@@ -121,14 +121,14 @@ scrapy crawl tencent
 运行之后，如果打印的日志出现 `[scrapy] INFO: Spider closed (finished)`，代表执行完成。 之后当前文件夹中就出现了一个 teacher.html 文件，里面就是我们刚刚要爬取的网页的全部源代码信息。
 
 ```
-# 注意，Python2.x默认编码环境是ASCII，当和取回的数据编码格式不一致时，可能会造成乱码；
-# 我们可以指定保存内容的编码格式，一般情况下，我们可以在代码最上方添加：
+ 注意，Python2.x默认编码环境是ASCII，当和取回的数据编码格式不一致时，可能会造成乱码；
+ 我们可以指定保存内容的编码格式，一般情况下，我们可以在代码最上方添加：
 
     import sys
     reload(sys)
     sys.setdefaultencoding("utf-8")
 
-# 这三行代码是Python2.x里解决中文编码的万能钥匙，经过这么多年的吐槽后Python3学乖了，默认编码是Unicode了...(祝大家早日拥抱Python3)
+ 这三行代码是Python2.x里解决中文编码的万能钥匙，经过这么多年的吐槽后Python3学乖了，默认编码是Unicode了...(祝大家早日拥抱Python3)
 
 ```
 
