@@ -1,4 +1,4 @@
-                        <h2 id="scrapy-&#x548C;-scrapyredis&#x7684;&#x533A;&#x522B;">Scrapy &#x548C; scrapy-redis&#x7684;&#x533A;&#x522B;</h2>
+
 <p>Scrapy &#x662F;&#x4E00;&#x4E2A;&#x901A;&#x7528;&#x7684;&#x722C;&#x866B;&#x6846;&#x67B6;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x5206;&#x5E03;&#x5F0F;&#xFF0C;Scrapy-redis&#x662F;&#x4E3A;&#x4E86;&#x66F4;&#x65B9;&#x4FBF;&#x5730;&#x5B9E;&#x73B0;Scrapy&#x5206;&#x5E03;&#x5F0F;&#x722C;&#x53D6;&#xFF0C;&#x800C;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x4EE5;redis&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x7EC4;&#x4EF6;(&#x4EC5;&#x6709;&#x7EC4;&#x4EF6;)&#x3002;</p>
 <blockquote>
 <p>pip install scrapy-redis</p>
@@ -50,14 +50,4 @@
 </li>
 </ul>
                     
-                    </section>
-                
-                
-                </div>
-            </div>
-        </div>
-
-
-        
-    </div>
-</div>
+     
